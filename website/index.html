@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Max (C)">
+	<meta name="description" content="Personal website">
+	<meta name="keywords" content="converter, referee, sorter, triangle">
+	<title>Max Krizik</title>
+	<!--  Font Awesome saite  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="icon" type="images/x-icon" href="images/favicon.png">
+	<script src="js/index.js"></script>
+</head>
+<body>
+	<!--  Darba sadaļa  -->
+	<h2 style="font-weight: bold;">Number converter</h2>
+	<main>
+		<!--  Teksta lauki datu ievadīšanai  -->
+		<label for="field1" style="font-weight: bold;">Enter the number:</label>&emsp;
+		<input type="text" id="field1" placeholder="For example: 48" value="">
+		<br><br>
+		<label for="numtype" style="font-weight: bold;">Convert to:</label>
+		<select id="numtype">
+			<option value="0" selected style="font-weight: bold;">Choose</option>
+			<option value="2" style="font-weight: bold;">Binary</option>
+			<option value="16" style="font-weight: bold;">Hexadecimal</option>
+		</select>
+		<br><br>
+		<input style="font-weight: bold;" type="button" onclick="myFunction()" value="Calculate">
+		<br><br><br>
+		<!--  Lauks ar resultātu  -->
+		<label style="font-weight: bold;" for="myResult">JavaScript Result:&emsp;</label>
+		<textarea  id="myResult" placeholder="Result" rows="11" spellcheck="false" style="width: 100%; font-size: 22px; color: lime; " readonly></textarea>
+		<br><br>
+		<!--  Poga, lai nodzēst visus laukus (Reset)  -->
+		<input style="font-weight: bold;" type="button" onclick="clearAll();" value="Clear all">
+		<br><br>
+	</main>
+		<h2 style="font-weight: bold;">Sorter</h2>
+	<main>
+		<label for="field11" style="font-weight: bold;">Text:</label>&emsp;
+		<input type="text" id="field11" placeholder="0 14 -17 52 6 -5">
+		<br><br>
+		<label for="sortby" style="font-weight: bold;">Sort by:</label>
+		<select id="sortby">
+			<option value="0" selected style="font-weight: bold;">Choose</option>
+			<option value="1" style="font-weight: bold;">Descending</option>
+			<option value="2" style="font-weight: bold;">Ascending</option>
+		</select>
+		<br><br>
+		<input style="font-weight: bold;" type="button" onclick="myFunction11()" value="Calculate">
+		<br><br><br>
+		<!--  Lauks ar resultātu  -->
+		<label style="font-weight: bold;" for="myResult">JavaScript Result:&emsp;</label>
+		<textarea  id="myResult11" placeholder="Result" rows="11" spellcheck="false" style="width: 100%; font-size: 22px; color: lime; " readonly></textarea>
+		<br><br>
+		<!--  Poga, lai nodzēst visus laukus (Reset)  -->
+		<input style="font-weight: bold;" type="button" onclick="clearAll11();" value="Clear all">
+		<br><br>
+	</main>
+		<h2 style="font-weight: bold;">Triangle math</h2>
+	<main>
+		<!--  Teksta lauki datu ievadīšanai  -->
+		<label for="numtype33" style="font-weight: bold;">You have:</label>
+		<select id="numtype33" onclick="choose();">
+			<option value="0" style="font-weight: bold;">Choose</option>
+			<option value="2" style="font-weight: bold;">Two cateths</option>
+			<option value="1" style="font-weight: bold;">Cateth and hypotenuse</option>
+		</select>
+		<label for="numtype22" style="font-weight: bold;margin-left: 5%;">Find:</label>
+		<select style="color: black;font-weight: bold;" disabled id="numtype22" onclick="choose2();">
+			<option value="0" style="font-weight: bold;">Choose</option>
+			<option value="1" style="font-weight: bold;">Hypotenuse</option>
+			<option value="2" style="font-weight: bold;">Second cateth</option>
+		</select>
+		<br><br>
+		<label id="field111" for="field111" style="font-weight: bold; color: #aaa;">A side (cm):</label>&emsp;
+		<input type="text" id="field333" readonly value="">
+		<br><br>
+		<label id="field222" for="field222" style="font-weight: bold; color: #aaa;">B side (cm):</label>&emsp;
+		<input type="text" id="field23" readonly value="">
+		<br><br>
+		<label id="field44" for="field44" style="font-weight: bold; color: #aaa;">C side (cm):</label>&emsp;
+		<input type="text" id="field35" readonly value="">
+		<br><br>
+		<input style="font-weight: bold;" type="button" onclick="checks()" value="Calculate">
+		<br><br><br>
+		<!--  Lauks ar resultātu  -->
+		<label style="font-weight: bold;" for="myResult">JavaScript Result:&emsp;</label>
+		<textarea  id="myResult33" placeholder="Result" rows="11" spellcheck="false" style="width: 100%; font-size: 22px; color: lime; " readonly></textarea>
+		<br><br>
+		<!--  Poga, lai nodzēst visus laukus (Reset)  -->
+		<input style="font-weight: bold;" type="button" onclick="clearAll33();" value="Clear all">
+		<br><br>
+	</main>
+		<h2 style="font-weight: bold;">Судейство</h2>
+	<main>
+		<!--  Teksta lauki datu ievadīšanai  -->
+		<label for="type1" style="font-weight: bold;">Карточка:</label>
+		<select onclick="check11()" id="type1" style="width: 21%;">
+			<option value="0" style="font-weight: bold;">Выбрать</option>
+			<option value="1" style="font-weight: bold;">1) Жёлтая</option>
+			<option value="2" style="font-weight: bold;">2) Красная</option>
+		</select>
+		<select onclick="trans()" id="type4" style="width: 20%; float: right;">
+		<option value="1" style="font-weight: bold;">Русский</option>
+		<option value="2" style="font-weight: bold;">Latviešu</option>
+		<option value="3" style="font-weight: bold;">English</option>
+		</select>
+		<br><br>
+		<label for="type2" style="font-weight: bold;">Нарушение:</label>
+		<select onclick="check223()" disabled id="type2" style="width: 60%;">
+			<option value="0" style="font-weight: bold;">Выбрать</option>
+			<option value="1" style="font-weight: bold;">1) Неспортивное поведение</option>
+			<option value="2" style="font-weight: bold;">2) Грубая игра в борьбе за мяч</option>
+			<option value="3" style="font-weight: bold;">3) Систематическое нарушение правил</option>
+			<option value="4" style="font-weight: bold;">4) Задержка времени</option>
+			<option value="5" style="font-weight: bold;">5) Не соблюдение дистанции</option>
+			<option value="6" style="font-weight: bold;">6) Не разрешённый вход/выход с поля</option>
+			<option value="7" style="font-weight: bold;">7) SPA</option>
+			<option value="8" style="font-weight: bold;">8) Оспаривание решения судьи</option>
+			<option value="9" style="font-weight: bold;">1) Агрессивная игра</option>
+			<option value="10" style="font-weight: bold;">2) Агрессивное поведение</option>
+			<option value="11" style="font-weight: bold;">3) DOGSO</option>
+		</select>
+		<br><br>
+		<label for="type3" style="font-weight: bold;">Подробнее:</label>
+		<select onclick="max()" disabled id="type3" style="width: 60%;">
+			<option value="0" style="font-weight: bold;">Выбрать</option>
+			<option value="1" style="font-weight: bold;">1) Вынос мяча соперника вне игры</option>
+			<option value="11" style="font-weight: bold;">2) Удар по воротам после свистка</option>
+			<option value="111" style="font-weight: bold;">3) Оскорбление соперника</option>
+			<option value="1111" style="font-weight: bold;">4) Симуляция</option>
+			<option value="11111" style="font-weight: bold;">5) Снятие майки</option>
+			<option value="2" style="font-weight: bold;">1) Удар по ногам</option>
+			<option value="22" style="font-weight: bold;">2) Подкат</option>
+			<option value="222" style="font-weight: bold;">3) Использование рук</option>
+			<option value="2222" style="font-weight: bold;">4) Задержка соперника руками</option>
+			<option value="6" style="font-weight: bold;">1) Вход на поле</option>
+			<option value="66" style="font-weight: bold;">2) Выход за поле</option>
+			<option value="9" style="font-weight: bold;">1) Подкат</option>
+			<option value="99" style="font-weight: bold;">2) Игра в соперника</option>
+			<option value="999" style="font-weight: bold;">3) Прямая нога</option>
+			<option value="10" style="font-weight: bold;">1) Удар соперника</option>
+			<option value="100" style="font-weight: bold;">2) Плевок</option>
+			<option value="1000" style="font-weight: bold;">3) Слова</option>
+			<option value="10000" style="font-weight: bold;">4) Жесты</option>
+		</select>
+		<br><br>
+		<!--  Lauks ar resultātu  -->
+		<label style="font-weight: bold;" for="myResult5">Дефиниция:&emsp;</label>
+		<div style="position: relative;">
+		<textarea  id="myResult5" placeholder="Результат" rows="11" spellcheck="false" style="width: 100%; font-size: 22px; color: lime;" readonly>
+		</textarea>
+		<div onclick="copy()" class="copy1" id="copyb" style="background-color: silver; position: absolute; margin-left: 75%; width: 15%; height: 10%; bottom: 5%;"><p style="text-align: center; margin-top: 7.5%;">Копировать</p></div>
+		</div>
+		<br><br>
+		<!--  Poga, lai nodzēst visus laukus (Reset)  -->
+		<input style="font-weight: bold;" type="button" onclick="clearAll5();" value="Очистить всё">
+		<br><br>
+	</main>
+		<h2 style="font-weight: bold;">Polindrome check</h2>
+	<main>
+		<!--  Teksta lauki datu ievadīšanai  -->
+		<label for="field" style="font-weight: bold;">Your text:</label>&emsp;
+		<input type="text" id="field7" placeholder="Anna" value="A man a plan a canal Panama">
+		<br><br>
+		<input style="font-weight: bold;" type="button" onclick="checks77()" value="Calculate">
+		<br><br><br>
+		<!--  Lauks ar resultātu  -->
+		<label style="font-weight: bold;" for="myResult">JavaScript Result:&emsp;</label>
+		<textarea  id="myResult7" placeholder="Result" rows="11" spellcheck="false" style="width: 100%; font-size: 22px; color: lime; " readonly></textarea>
+		<br><br>
+		<!--  Poga, lai nodzēst visus laukus (Reset)  -->
+		<input style="font-weight: bold;" type="button" onclick="clearAll7();" value="Clear all">
+		<br><br>
+	</main>
+	<h2 style="font-weight: bold;">fibonacci numbers</h2>
+	<main>
+		<!--  Teksta lauki datu ievadīšanai  -->
+		<label for="fieldfib" style="font-weight: bold;">Your number:</label>&emsp;
+		<input type="text" id="fieldfib" placeholder="5" value="6">
+		<br><br>
+		<input style="font-weight: bold;" type="button" onclick="galvena()" value="Calculate">
+		<br><br><br>
+		<!--  Lauks ar resultātu  -->
+		<label style="font-weight: bold;" for="myResult">JavaScript Result:&emsp;</label>
+		<textarea  id="myResultfib" placeholder="Result" rows="11" spellcheck="false" style="width: 100%; font-size: 22px; color: lime; " readonly></textarea>
+		<br><br>
+		<!--  Poga, lai nodzēst visus laukus (Reset)  -->
+		<input style="font-weight: bold;" type="button" onclick="clearAllfib();" value="Clear all">
+		<br><br>
+	</main>
+	<aside>
+		<div><p style="font-weight: bold; font-size: 4em; text-align: center;">MAX KRIZIK<p></div>
+			<div class="footer2">
+			<p><a href="https://www.youtube.com/channel/UCWLxgMwJRf7oj65t_lH5XLg" target="_blank"><i class="fa-brands fa-youtube"></i></a><a href="https://www.instagram.com/maxkrizik/" target="_blank"><i class="fa-brands fa-instagram"></i></a><a href="https://vk.com/maxkrizik" target="_blank"><i class="fa-brands fa-vk"></i></a><a href="https://ok.ru/profile/572704718371" target="_blank"><i class="fa-brands fa-odnoklassniki-square"></i></a><a href="https://www.facebook.com/profile.php?id=100023240833506" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>
+		</div>
+		<div class="footer1">
+			<h3>© 2022 Jurmala Latvia, Inc. All rights reserved<h3>
+		</div>	
+	</aside>
+	<!--  PP logotips  -->
+	<a href="http://ppskola.epizy.com" target="_blank"><p class="ppFA">PP SK<i class="fas fa-power-off"></i>L<i class="fas fa-at"></i><br> <span style="margin-left: 10px; font: 0.6em Arial; font-style: italic;">{ coding = song }</span></p></a>
+</body>
+</html>

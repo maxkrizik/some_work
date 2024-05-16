@@ -1,0 +1,68 @@
+main {
+    position: relative;
+    border: 0.5em solid gray;
+    border-radius: 0.5em;
+    height: 60%;
+    width: 100%;
+}
+.head2 {
+    position: relative;
+    width: 60%;
+    text-align: center;
+    left: 20%;
+}
+.text2 {
+    position: relative;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 5em; 
+    color: #000000;
+}
+.main1 {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.subMain {
+    position: relative;
+    display: grid;
+    width: 49%;
+}
+.banner {
+    position: relative;
+} 
+.bannerText {
+    position: relative;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 3em; 
+    color: #141615;
+}
+.text3 {
+    position: relative;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 1.8em; 
+    color: #141615;
+    width: 75%;
+    height: 80%;
+    left: 15%;
+    top: 2%;
+    font-weight: bold;
+}
+
+top: 10%;.bubble {
+    position: relative;
+    width: 49%;
+    float: right;
+}
+.underbubble {
+    position: relative;
+}
+.bubbleText {
+    position: relative;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 3em; 
+    color: #FFCB73;
+}

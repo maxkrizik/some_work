@@ -1,0 +1,355 @@
+/* Common styles for all elements */
+* {box-sizing: border-box;}
+
+/* Styles for html and body */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Styles for body */
+body {
+    font: 1em Arial;
+    line-height: 1.4;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styles for header */
+header {
+    position: relative;
+    background-image: linear-gradient(#523634, #301B28);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+}
+
+/* Styles for h1 */
+h1 {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3em;
+}
+
+/* Styles for main */
+main {
+    overflow: hidden;
+    display: flex;
+    height: 100%;
+}
+
+/* Styles for footer */
+footer {
+    background-image: linear-gradient(#523634, #301B28);
+    height: 10%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+/* Styles for panel */
+#panel {
+    padding-left: 20px;
+    padding-top: 20px;
+    color: white;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.5em;
+}
+
+/* Styles for select */
+select {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1em;
+    margin-left: 10px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Styles for input */
+input {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1em;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+/* Styles for piev */
+.piev {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1em;
+    margin-top: 10px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Hover styles for piev */
+.piev:hover {
+    cursor: pointer;
+    transform: scale(0.97);
+}
+
+/* Styles for regulet */
+.regulet {
+   border-radius: 15px;
+   font-size: 1em;
+   font-weight: bold;
+   text-align: center;
+}
+
+/* Hover styles for regulet */
+.regulet:hover {
+    cursor: pointer;
+    transform: scale(0.97);
+}
+
+/* Styles for saraksts */
+.saraksts {
+     padding-left: 20px;
+    padding-top: 20px;
+    color: white;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.5em;
+}
+
+/* Hover styles for button */
+button:hover {
+    cursor: pointer;
+}
+
+/* Styles for left main section */
+.leftmain {
+    width: 30%;
+    background-image: linear-gradient(#301B28, #523634);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    height: auto; /* Replace fixed height with automatic expansion */
+}
+
+/* Hide scrollbars */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Styles for right main section */
+.rightmain {
+    width: 70%;
+    background-image: linear-gradient(#301B28, #523634);
+    height: auto; /* Replace fixed height with automatic expansion */
+    overflow: auto;
+}
+
+/* Styles for menu */
+.menu {
+    width: 50%;
+    margin: 15px;
+    border: 8px outset #ddc5a2;
+    padding: 5px;
+}
+
+/* Styles for links in menu */
+.menu a {
+    display: block;
+    padding: 10px 0;
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2em;
+}
+
+/* Styles for normal links */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Hover styles for normal links */
+a:hover {
+  cursor: pointer;
+}
+
+/* Styles for links */
+.links {
+    position: absolute;
+    top: 10px;
+    right: 240px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Styles for scheme */
+.scheme {
+    position: absolute;
+    top: 10px;
+    right: 340px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Styles for structure11 */
+.structure11 {
+    position: absolute;
+    top: 10px;
+    right: 480px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Hover styles for scheme */
+.scheme:hover {
+    transform: scale(0.92);
+}
+
+/* Hover styles for structure11 */
+.structure11:hover {
+    transform: scale(0.92);
+}
+
+/* Hover styles for links */
+.links:hover {
+    transform: scale(0.92);
+}
+
+/* Styles for links1 */
+#links1 {
+    font-size: 1.5em;
+}
+
+/* Hover styles for h1 */
+h1:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
+/* Hover styles for links1 */
+#links1 a:hover {
+    text-decoration: underline;
+}
+
+/* Hover styles for menu links */
+.menu a:hover {
+    background-color: #ccc;
+}
+
+/* Styles for h2 */
+h2 {
+    text-align: center;
+    color: white;
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.6em;
+}
+
+/* Styles for footer content */
+.footer-content {
+    display: flex;
+    align-items: center;
+    margin-right: 1%;
+}
+
+/* Styles for return button */
+.return {
+  position: absolute;
+  top: 10px; /* Place the button in the top right corner */
+  right: 10px;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Hover styles for return button */
+.return:hover {
+  transform: scale(0.97);
+}
+
+/* Styles for product item */
+.product-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Add some spacing between items */
+    border: 1px solid #ccc; /* Add a regular border */
+    border-radius: 15px; /* Add rounded corners */
+    padding: 10px; /* Add some padding around the item */
+}
+
+/* Styles for product images */
+.product-item img {
+    border-radius: 15px;
+    margin-right: 10px;
+}
+
+/* Styles for product numbers */
+.product-number {
+    margin-right: 10px; /* Add some spacing between the number and the image */
+}
+
+/* Styles for product images */
+.product-image {
+    width: 100px; /* Set the image size as desired */
+}
+
+/* Styles for product descriptions */
+.product-description {
+    display: inline-block; /* Make the block inline so margins apply */
+    vertical-align: middle; /* Vertically align */
+}
+
+/* Styles for buttons in product items */
+.product-item button {
+    margin-left: 5px;
+}
+
+/* Dinamic */
+@media screen and (max-width: 1100px) {
+    .menu {border: none; overflow: auto;}
+    h1 {font-size: 1.5em}
+    h2 {font-size: 1em}
+    p {font-size: 0.9em}
+    button {width: 20%; font-size: 0.3em;}
+    .structure11 {display: none;}
+    .scheme {display: none;}
+    footer {font-size: 0.7em}
+    label {font-size: 0.7em}
+    input {width: 50%}
+    .piev {width: 80%}
+    .regulet {width: 10%; font-size: 0.7em}
+    #ins p {font-size: 0.5em}
+}

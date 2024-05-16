@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,600;1,9..40,600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <script src="scripts/index.js" defer></script>
+  <title>Noliktava</title>
+</head>
+<body>
+    <header>
+    <!-- Headline of website -->
+    <h1 onclick="home()">Max Fish</h1>
+    <!-- Button to load constantly start copy -->
+    <button class="return" onclick="goback()">Atgriezt rezerves kopiju</button>
+    <!-- Button to open div with links -->
+    <button class="links" onclick="shlinks()">Linki</button>
+    <!-- Button to open div with block-scheme -->
+    <button class="scheme" onclick="sch()">Blok-shēma</button>
+    <!-- Button to open div with block-structure -->
+    <button class="structure11" onclick="str()">Blok-struktūra</button>
+</header>
+<main>
+    <!-- Left div of main -->
+    <div class="leftmain">
+        <!-- Menu with groups -->
+        <div class="menu">
+            <h2>Produktu grupas</h2>
+           <p> <a onclick="sal()">Saldēti</a></p>
+           <p><a onclick="atdz()">Atdzesēti</a></p>
+            <p><a onclick="zav()">Žāvēti</a></p>
+        </div>
+        <!-- Menu with control panel and instruction -->
+        <div class="menu">
+            <h2>Produktu vadība</h2>
+            <p><a onclick="panel()">Rediģēt sarakstu</a></p>
+            <p><a onclick="instr()">Instrukcija</a></p>
+        </div>
+    </div>
+    <!-- Right div of main -->
+    <div class="rightmain">
+        <!-- Div with block-scheme -->
+        <div id="scheme" style="display: none;"><img style="width: 80%" src="images/scheme.png"></div>
+        <!-- Div with block-structure -->
+        <div id="structure" style="display: none;"><img style="width: 80%;" src="images/structure.png"></div>
+        <!-- Div with links -->
+        <div id="links1" style="display: none;">
+            <a target="_blank" href="https://salas-zivis.com">Salas zivis</a>
+            <br><br>
+            <a target="_blank" href="https://www.flaticon.com/ru/free-icon/warehouse_1198294">FlatIcon</a>
+            <br><br>
+            <a target="_blank" href="https://www.rimi.lv/">Rimi</a>
+            <br><br>
+            <a target="_blank" href="https://vyalenaryba.com.ua/ru/koryst-vyalenoi-ryby/">Vyalenaryba.ua</a>
+            <br><br>
+            <a target="_blank" href="https://www.w3schools.com/js/js_object_methods.asp">W3schools1</a>
+            <br><br>
+            <a target="_blank" href="https://www.w3schools.com/js/js_object_constructors.asp">W3schools2</a>
+            <br><br>
+            <a target="_blank" href="http://ppskola.epizy.com/pp-skola/javascript/2-10-1_object-constructor.html">PPskola</a>
+            <br><br>
+            <a target="_blank" href="https://learn.javascript.ru/localstorage">LearnJS</a>
+            <br><br>
+            <a target="_blank" href="https://programforyou.ru/block-diagram-redactor">Programforyou</a></div>
+        <!-- Div with control panel -->
+        <div id="panel">
+            <!-- Form to add new element -->
+            <div>
+                <label for="group">Grupa:</label>
+                <select id="group">
+                    <option value="1">Saldēti</option>
+                    <option value="2">Atdzesēti</option>
+                    <option value="3">Žāvēti</option>
+                </select>
+            </div>
+            <div>
+                <label for="type">Nosaukums:</label>
+                <input type="text" id="type" value="Ustricas">
+            </div>
+            <div>
+                <label for="amount">Daudzums:</label>
+                <input type="number" id="amount" value="23">
+            </div>
+            <div>
+                <label for="image">Links uz attēlu:</label>
+                <input type="text" id="image" value="links?">
+            </div>
+            <!-- Button to add new element -->
+            <button class="piev" onclick="addSeaProduct()">Pievienot sarakstām</button>
+            <!-- List of all elements in database -->
+            <div id="seaProductList">
+                <!-- Instant elements from JS -->
+            </div></div>
+        <!-- Div with list of saldeti elements -->
+        <div id="saldeti" class="saraksts" style="display: none;"><h2>Saldeti</h2></div>
+        <!-- Div with instruction -->
+        <div id="instrukcija" style="display: none;"></div>
+        <!-- Div with list of atdzeseti elements -->
+        <div id="atdzeseti" class="saraksts" style="display: none;"></div>
+        <!-- Div with list of zaveti elements -->
+        <div id="zaveti" class="saraksts" style="display: none;"></div>
+        <div id="ins" class="saraksts" style="display: none;">
+            <h2>Kas tē ir?</h2>
+            <p>Visa šī vietne ir noliktavas grāmatvedības simulācija. Tas nozīme, ka jūs varāt pievenot jaunas preces, mainīt to daudzumu, pievenot produkta attēlus un tas viss saglābāsies gan pēc lapas atjaunošānās, gan pēc brauzera aizvēršānās. Lūdzu pieverst uzmanību, ka ir 10 sākotnēji elementi, kurus nedrīkst nodzēst! To visu, jūs varāt izdarīt sekcijā "Produktu vadība".</p>
+            <p>Kā arī ir citas sekcijas, piemēram "Saldēti". Tur ir iespējams aplūkot visus elementus, kuriem ir piešķirta grupas "saldēti", bez iespējas mainīt daudzumu un dzēst prom šo elementu. Savukārt citās sekcijās ir lidzīgi.</p>
+            <h2>Kā pievenot preci?</h2>
+            <p>Lai pievenotu jauno preci, jūms ir jāatvēr sekciju "Rediģēt sarakstu". Tur jūs uzreiz varāt izvēlētie nepieciešamu produkta grupu, ievadīt produkta nosaukumu, daudzumu, ka arī ievadīt linku uz attēlu no internetā. Kad jūs visu esat izdarījuši paliek tikai uzspist pogu "Pievenot sarakstām".</p>
+            <h2>Kā kontrolēt produkta daudzumu?</h2>
+            <p>Sekcijā "Rediģēt sarakstu", katrām elementam pa labi ir 3 pogas. Poga "+" atbild par daudzuma palielināšānu uz 1 mērvienību, savukārt poga "-" prēti atbild pazemināšānai uz 1 mērvienību. Uzspiežot pogu "Dzēst", produkts pilnīgi tiks dzēsts prom no vietnes (izņemot sakotnējus produktus).</p>
+            <h2>Kā atgriezt sakotnējus datus?</h2>
+            <p>Lai atgrieztu sakotnēju produktu sarakstu, jūms ir jāuzspiež uz pogu "Atgriezt rezerves kopiju". Tā poga jebkurā brīdī atrādas augšā, labājā pusē.</p></div>
+    </div>
+</main>
+<footer>
+    <!-- Copyright -->
+    <h2 style="margin-left: 1%; font-size: 1em">© 2024 Maksims Križanovskis, publicētā satura visas tiesības aizsargātas.</h2>
+    <!-- Social networks -->
+    <div class="footer-content">
+        <a target="_blank" href="https://www.facebook.com/profile.php?id=100023240833506"><img style="width: 60px" src="images/facebook.png" alt="Facebook"></a>
+        <a target="_blank" href="https://www.instagram.com/maxkrizik/"><img style="width: 80px" src="images/instagram.png" alt="Instagram"></a>
+    </div>
+</footer>
+</html>

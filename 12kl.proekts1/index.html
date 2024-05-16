@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Maksims (C)">
+	<meta name="description" content="Web Programming and Design">
+	<meta name="keywords" content="web, html, css, javascript">
+	<title>Matemātiskā modelēšana</title>
+	<link rel="stylesheet" type="text/css" href="styles/index.css">
+	<link rel="icon" type="images/x-icon" href="images/icon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Montserrat:ital,wght@1,200&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap" rel="stylesheet">
+	<script src="js/index.js"></script>
+</head>
+<body>
+	<header>
+		<h2 style="font-weight: bold;">Matemātiskā modelēšana</h2>
+	</header>
+	<main>
+		<div class="form">
+			<pre>(<i><b>A</b></i>x³ + x - <i><b>B</b></i>)³ = <i><b>C</b></i> - x³</pre>
+		</div>
+		<div class="lauki">
+			<label for="field1" style="font-weight: bold;">A koeficents:</label>&emsp;
+			<input style="border: 1px solid lime;" type="text" id="field1" value="2">
+		</div>
+		<div class="lauki">
+			<label for="field1" style="font-weight: bold;">B koeficents:</label>&emsp;
+			<input style="border: 1px solid red;" type="text" id="field2" value="3">
+		</div>
+		<div class="lauki">
+			<label for="field1" style="font-weight: bold;">C koeficents:</label>&emsp;
+			<input style="border: 1px solid lime;" type="text" id="field3" value="3">
+		</div>
+		<input style="font-weight: bold; margin-top: 3%;" type="button" onclick="manage()" value="Aprēķināt">
+		<br><br><br>
+		<label class="rezult" style="font-weight: bold; font-family: 'Hedvig Letters Serif', serif;" for="myResult">Rezultāts:&emsp;</label>
+		<textarea  id="myResult" placeholder="Uzpiediet augšā uz pogu 'Aprēķināt', lai parādās atbilde" rows="11" spellcheck="false" style="width: 100%; font-size: 22px; color: lime; " readonly></textarea>
+		<br><br>
+		<input style="font-weight: bold;" type="button" onclick="clearAll();" value="Notīrīt visu">
+		<br><br>
+	</main>
+	<main>
+		<img id="mat" src="images/math.png" class="mat">
+		<div class="detalas" id="detalas" style="width: 100%;">
+    		<details>
+				<summary>
+					<h3 style="font-weight: bold;">Lietošānās instrukcija</h3>
+				</summary>
+				<p style="text-align: left; padding: 10px; font-size: 1.3em">
+				<b><span style="font-size: 1.5em;">Zemāk redzamā ir lietošanas pamācība šim lieliskajam vienādojumu atrisināšanas kalkulatoram:</span><br><br>
+
+				1) <i>Ievadiet Koeficientus:</i><br>
+				Lūdzu, ievadiet trīs koeficientus, lai sāktu aprēķinus. Visiem trīs laukiem ir jābūt aizpildītiem ar cipariem no 1 līdz 999. Lietojiet tikai ciparus, un lūdzu, izvairieties no burtiem un speciālajiem simboliem.<br><br>
+
+				2) <i>Spiediet "Aprēķināt":</i><br>
+				Kad esat ievadījis visus koeficientus, nospiediet pogu "Aprēķināt", lai iegūtu risinājumu. Rezultātā parādīsies risināmais vienādojums un x vērtība.<br><br>
+
+				3) <i>Notīriet risinājumu:</i><br>
+				Skaidrs risinājums ir zemāk, tālāk nospiediet pogu "Notīrīt visu", lai saglabātu kalkulatoru tīru.<br><br>
+
+				<i><u>!! Lūdzu, ņemiet vērā, ka neviens no koeficientiem nedrīkst būt mazāks vai vienāds ar 0, un tie nedrīkst pārsniegt vērtību 999 !!</i></u><br><br>
+
+				Jūs esat gatavs atrisināt savus vienādojumus, izmantojot šo ērtu kalkulatoru!</b>
+				</p>
+			</details>
+		</div>
+		<div class="detalas" id="detalas" style="width: 100%;">
+			<details>
+				<summary>
+					<h3 style="font-weight: bold;">Risinājuma piemērs</h3>
+				</summary>
+				<p style="text-align: left; padding: 10px; font-size: 1.5em;">
+					Vienādojums: <b>(2x³ + x - 3)³ = 3 - x³</b><br><br>
+					Risinājuma plans:<br>
+					1) Veicam substitūciju.<br>
+					2) Izteicam nezināmo.<br>
+					3) Izmantojam starpības kuba formulu.<br>
+					4) Pielīdzinām vienādojumu nullei.<br>
+					5) Pierākstam kā kvadrāta summu.<br>
+					6) Sēcinām, ka substitūcija būs vienāda ar nezinamo.<br>
+					7) Izteicam nezināmo un saņemam atbildi kubā saknes veidā.<br><br>
+					Risinājums:<br>
+					<b>(2x³ + x - 3)³ = 3 - x³</b><br><br>
+					1) t = 2x³ + x - 3;&nbsp;&nbsp;&nbsp;&nbsp;<b>t³ = 3 - x³;&nbsp;&nbsp;&nbsp;&nbsp; x³ = 3 - t³;</b><br><br>
+					2) t = 2(3 - t³) + x - 3;&nbsp;&nbsp;&nbsp;&nbsp; <b>t = 6 - 2t³ + x - 3;</b><br>
+					{ x = 2t³ + t -3;&nbsp;&nbsp;&nbsp;&nbsp; <b>x - t = 2(t³ - x³) + t - x;</b> }<br>
+					{ t = 2x³ + x -3;&nbsp;&nbsp;&nbsp;&nbsp; <b>2(t³ - x³) + 2(t - x) = 0</b> }<br><br>
+					3) <b>(t - x)(t² + tx + x²) + (t - x) = 0;</b><br><br>
+					4) (t - x)(t² + tx + x² + 1) = 0;&nbsp;&nbsp;&nbsp;&nbsp;<b>(t - x)(t² + 2∙t + <sup>x</sup>&frasl;<sub>2</sub> + <sup>x²</sup>&frasl;<sub>4</sub> + <sup>3x²</sup>&frasl;<sub>4</sub> + 1) = 0;</b><br><br>
+					5)	<b>(t - x)((t + <sup>x</sup>&frasl;<sub>2</sub>)² + <sup>3x²</sup>&frasl;<sub>4</sub> + 1) = 0;</b><br><br>
+					6)	t - x = 0;&nbsp;&nbsp;&nbsp;&nbsp;<b>t = x;</b><br><br>
+					7)	x = 2x³ + x - 3;&nbsp;&nbsp;&nbsp;&nbsp; 2x³ = 3;&nbsp;&nbsp;&nbsp;&nbsp; x³ = <sup>3</sup>&frasl;<sub>2</sub>;&nbsp;&nbsp;&nbsp;&nbsp; <b>x = &#8731;<sup>3</sup>&frasl;<sub>2</sub> &#8776; 1,14</b><br><br>
+					Atbilde: x &#8776; 1,14<br><br>
+					<i>Lai atrisinātu vienādojumu ar citiem koeficentiem var izmantot unikālo formulu <b>( <sup>a</sup>&frasl;<sub>b</sub> )<sup>⅓</sup>, bet lai tās darbojas ir dažie nosācījumi:</i><br>
+					1) Ir jābūt atkarībai <b><u>2∙b = a∙c</u></b><br>
+					2) Koeficents nevar būt mazāks vai vienāds ar 0.
+				</p>
+			</details>
+		</div>
+		<div class="detalas" id="detalas" style="width: 100%;">
+			<details>
+				<summary>
+					<h3 style="font-weight: bold;">Blok-struktūra</h3>
+				</summary>
+				<img style="width: 60%" src="images/blockst.png">
+			</details>
+		</div>
+		<div class="detalas" id="detalas" style="width: 100%;">
+			<details>
+				<summary>
+					<h3 style="font-weight: bold;">Blok-shēma</h3>
+				</summary>
+				<img style="width: 70%" src="images/blocksh.png">
+			</details>
+		</div>
+		<div class="detalas" id="detalas" style="width: 100%;">
+			<details>
+				<summary>
+					<h3 style="font-weight: bold;">Izmantotie resursi</h3>
+				</summary>
+				<p style="text-align: left; padding: 10px; font-size: 1.5em;">
+					Darbā gaitā tika izmantota informācija no dāžādiem avotiem:<br><br>
+					1) <a target="_blank" href="https://www.uzdevumi.lv/p/zinatniski-petnieciskie-darbi/10-12-klase/skolenu-zinatniski-petnieciskie-darbi-zpd-9755/re-25a8e480-6ae4-41fb-9f3f-a5f631dd4891">Uzdevumi.lv</a><br>
+					2) <a target="_blank" href="https://my.e-klase.lv/Attachment/Get/4c738b17-c6c3-451a-abab-2e60183b3570">Solving nonstandard equations (P.P)</a><br>
+					3) <a target="_blank" href="https://www.youtube.com/watch?v=hPWT55YLvFU">Супер ЖЕСТЬ для продвинутых (V.V)</a><br>
+					4) <a target="_blank" href="https://www.desmos.com/calculator?lang=ru">Grafiskais kalkulātors</a>
+				</p>
+			</details>
+		</div>
+		<div class="detalas" id="detalas" style="width: 100%;">
+			<details>
+				<summary>
+					<h3 style="font-weight: bold;">Mobila apklikācija</h3>
+				</summary>
+				<a href="https://drive.google.com/uc?export=download&id=1-f6rUnZ7dGh4UxIrC7uK1A_B3sJSsLxb" target="_blank"><input style="font-weight: bold; width: 50%; margin-bottom: 5%;" type="button" value="Instālēt"></a>
+			</details>
+		</div>
+	</main>
+	<footer>
+		<main>
+			<p class="foot">© 2023 Maksims Križanovskis, publicētā satura visas tiesības aizsargātas.</p>
+				<a target="_blank" href="https://www.facebook.com/profile.php?id=100023240833506"><img width="5%" src="images/face.png"></a>
+				<a target="_blank" href="https://www.instagram.com/maxkrizik/"><img width="5%" src="images/insta.png"></a>
+		</main>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+.menu {
+	list-style-type: none;
+	margin-right: 0em;
+	animation: inv 3s;
+}
+
+.menu a {
+  text-decoration: none;
+  font-family: sans-serif;
+  color: #b87979;
+  display: inline-block;
+  margin-right: 4em;
+  border-bottom: 5px solid #805252;
+  font-size: 2.5em;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: bold;
+  transition: .4s;
+}
+
+.menu a:hover {
+  transform: scale(1.2);
+  color: #820404;
+}
+
+.menu li {
+	display: inline;
+  position: relative;
+}
+
+.menu ul {
+  display: none;
+  position: absolute;
+  width: 200px;
+}
+
+.menu ul a {
+  padding: 5px 10px;
+}
+
+.menu ul a:hover {
+  background: silver;
+  color: red;
+}
+
+.menu ul:hover {
+  display: block;
+}
+nav {
+  position: fixed;
+  left: 6em;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+  animation: inv 3s;
+}

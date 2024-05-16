@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="lv">
+<!--
+					Pāvels Proskurovskis
+					   Jūrmala, Latvia
+					  PP Skola (C) 2018
+				  http://ppskola.epizy.com/
+-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Maksims (C)">
+	<title>Mans Dokuments</title>
+<style>
+	/*  Saglabājiet jebkuras konteinera noteikto platumu un augstumu  */
+	* {box-sizing: border-box;}
+	/*  Ķermeņa BODY-tagu stils  */
+	body {
+		margin: 0px;
+		padding: 30px;
+		background-color: #d6d6d6;
+		font: 1.1em sans-serif;
+	}
+	#izvade {font-size: 1.3em;color: #9700e2;}
+</style>
+</head>
+<body>
+	<!--  Ievades tagi  -->
+	<header>
+		<h2>Uzdevums No. 1</h2>
+		<p>[ Šajā nodarbībā uzzināsim, kā izmantot ... ]</p>
+		<br><hr><br>
+		<blockquote><b>JS funkcijas darba rezultāts:</b></blockquote>
+		<p id="izvade">.</p>
+		<br><hr><br>
+	</header>
+
+<script>
+	/////////////////////////////////////////////////////
+	//  Funkcija, lai atrastu visus iespējamos robota pastaigu ceļus
+	const manaFunkcija = (m, n) => {
+		//  Sastādiet un atgrieziet gala rezultātu
+			return " summa ir: " + (m + n);
+	};
+	/////////////////////////////////////////////////////
+	// Dotais masīvs
+	const plat = -3; const augst = 2;
+	//  Sāciet funkciju un izdrukājiet rezultātu
+	document.getElementById("izvade").innerHTML = "Skaitļu " + plat + " un " + augst + manaFunkcija(plat, augst);
+	//
+</script>
+</body>
+</html>

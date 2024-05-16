@@ -1,0 +1,92 @@
+footer {
+	background-color: silver;
+	border-radius: 15%;
+	opacity: 0.8;
+	border: 1px solid black;
+	position: relative;
+}
+
+.footer1 {
+	position: relative;
+	width: 40em;
+	text-align: center;
+	float: left;
+	margin-top: 2.5em;
+}
+
+.footer2 {
+	position: relative;
+	width: 40em;
+	text-align: center;
+	float: right;
+	margin-top: 2.5em;
+}
+
+.fa-youtube {
+	color: red;
+	font-size: 40px;
+	position: relative;
+	margin-left: 1em;
+	margin-right: 1em;
+	animation: pulse 4s infinite;
+}
+
+.fa-youtube:hover {
+	animation: pulse 1s infinite;
+}
+
+.fa-instagram {
+	color: pink;
+	font-size: 40px;
+	position: relative;
+	margin-left: 1em;
+	margin-right: 1em;
+	animation: pulse 4s infinite;
+	animation-delay: 0.2s;
+}
+
+.fa-instagram:hover {
+	animation: pulse 1s infinite;
+}
+
+.fa-vk {
+	color: blue;
+	font-size: 40px;
+	position: relative;
+	margin-left: 1em;
+	margin-right: 1em;
+	animation: pulse 4s infinite;
+	animation-delay: 0.4s;
+}
+
+.fa-vk:hover {
+	animation: pulse 1s infinite;
+}
+
+.fa-odnoklassniki-square {
+	color: orange;
+	font-size: 40px;
+	position: relative;
+	margin-left: 1em;
+	margin-right: 1em;
+	animation: pulse 4s infinite;
+	animation-delay: 0.6s;
+}
+
+.fa-odnoklassniki-square:hover {
+	animation: pulse 1s infinite;
+}
+
+.fa-facebook {
+	color: darkblue;
+	font-size: 40px;
+	position: relative;
+	margin-left: 1em;
+	margin-right: 1em;
+	animation: pulse 4s infinite;
+	animation-delay: 0.8s;
+}
+
+.fa-facebook:hover {
+	animation: pulse 1s infinite;
+}

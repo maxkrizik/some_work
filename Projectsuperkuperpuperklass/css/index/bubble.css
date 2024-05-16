@@ -1,0 +1,22 @@
+.theBubble {
+  width: 40em;
+  height: 40em;
+  border-radius: 54% 46% 42% 58% / 60% 58% 42% 40%;
+  background-image: linear-gradient(to right top, #a0b1a6, #E7FFF0);
+  animation: wave 5s linear infinite;
+  margin: 5em;
+}
+@keyframes wave {
+  20% {
+    border-radius: 45% 55% 62% 38% / 53% 51% 49% 47%;
+  }
+  40% {
+    border-radius: 45% 55% 49% 51% / 36% 51% 49% 64%;
+  }
+  60% {
+    border-radius: 60% 40% 57% 43% / 47% 62% 38% 53%;
+  }
+  80% {
+    border-radius: 60% 40% 32% 68% / 38% 36% 64% 62%;
+  }
+}
